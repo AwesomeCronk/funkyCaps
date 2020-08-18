@@ -22,7 +22,20 @@ class mainWindow(QMainWindow):
         self.outputBox.setText("Output will be printed here.")
 
     def convert(self):
-        self.outputBox.setText("Sorry, that's not implemented yet!")
+        upper = False
+        strIn = self.inputBox.toPlainText()
+        strOut = ''
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPGRSTUVWXYZ'
+        for c in strIn:
+            if c in chars:
+                if upper:
+                    strOut += c.upper()
+                else:
+                    strOut += c.lower()
+                upper = not upper
+            else:
+                strOut += c
+        self.outputBox.setText(strOut)
 
 if __name__ == '__main__':
     app = QApplication([])

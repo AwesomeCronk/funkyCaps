@@ -1,1 +1,1 @@
-This is a converter that converts text to funky caps.
+This is a converter that converts text to funky caps. To install it, click the big green button that says "Code" at the top, then click "Download ZIP". Unpack the zip archive wherever you want and run "funkyCaps.exe".
